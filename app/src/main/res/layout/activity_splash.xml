@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_bg"
+    android:padding="24dp">
+
+    <!-- Centerpiece Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Circular Profile Image Frame -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgSplashPhoto"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/cd_profile_photo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/my_profile"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp" />
+
+        <!-- Subtext / Tagline -->
+        <TextView
+            android:id="@+id/txtSplashName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:letterSpacing="0.05"
+            android:text="@string/profile_name"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSplashSubtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.08"
+            android:text="@string/splash_subtext"
+            android:textColor="@color/text_tertiary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtSplashTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:letterSpacing="0.12"
+            android:text="@string/splash_tagline"
+            android:textAllCaps="true"
+            android:textColor="@color/text_tertiary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- Bottom Timer Indicator -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/splashProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="180dp"
+            android:layout_height="4dp"
+            android:max="5000"
+            android:progress="0"
+            android:progressTint="@color/white" />
+
+        <TextView
+            android:id="@+id/txtSplashTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:letterSpacing="0.05"
+            android:text="Redirecting to main profile in 5s..."
+            android:textColor="@color/text_tertiary"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

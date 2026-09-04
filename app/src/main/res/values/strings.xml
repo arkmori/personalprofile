@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Personal Profile</string>
+    <string name="splash_subtext">ITSD83 - Laboratory Activity #1</string>
+    <string name="splash_tagline">My Portfolio</string>
+    <string name="splash_timer_msg">Redirecting to main profile in %ds...</string>
+    <string name="cd_profile_photo">Personal Profile Photo</string>
+    <string name="status_available">• Available for Projects</string>
+
+    <!-- Profile Strings -->
+    <string name="profile_name">Charles Asher Dimakuta</string>
+    <string name="profile_title">Student</string>
+    <string name="profile_motto">"To live, to love, to have no regrets."</string>
+
+    <!-- Academic Details -->
+    <string name="section_academic">Academic Details</string>
+    <string name="label_course">Course</string>
+    <string name="academic_course">Bachelor of Science in Information Technology</string>
+    <string name="label_year_section">Year &amp; Section</string>
+    <string name="academic_year_section">3rd Year — BSIT 3Cx</string>
+    <string name="label_department">Department / School</string>
+    <string name="academic_school">College of Information Sciences and Computing</string>
+
+    <!-- About Me -->
+    <string name="section_about">About Me</string>
+    <string name="about_text">20, Student, self-proclaimed writer. I code when I don\'t write, and write when I don\'t code.</string>
+
+    <!-- Contact Info -->
+    <string name="section_contact">Contact Information</string>
+    <string name="contact_email">dimakutacharlesasher@gmail.com</string>
+    <string name="contact_phone">+63 910 091 3836</string>
+    <string name="contact_location">Bukidnon, Philippines</string>
+    <string name="contact_github">github.com/arkmori</string>
+
+    <!-- Skills & Interests -->
+    <string name="section_skills">Technical Skills</string>
+    <string name="skill_java_android">Programming</string>
+    <string name="skill_ui_ux">UI/UX Prototyping</string>
+    <string name="skill_web">Web Development</string>
+    <string name="skill_writing">Essay &amp; Literary Writing</string>
+
+    <string name="section_hobbies">Hobbies &amp; Interests</string>
+    <string name="hobbies_list">• Anime \n• Reading Novels\n• Poetry\n• Essay Writing &amp; Narratives</string>
+
+    <string name="section_achievements">Achievements</string>
+    <string name="achievement_1_title">2nd Place, English Column Writing, DSPC 2024</string>
+    <string name="achievement_1_desc">Won second place in column writing - english category during my final senior high school year.</string>
+    <string name="achievement_2_title">With Honors, 2024</string>
+    <string name="achievement_2_desc">Recognized for outstanding academic achievement in Senior High School.</string>
+</resources>
