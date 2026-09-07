@@ -8,10 +8,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * MainActivity presents personal information, academic details, about me statement,
- * contact info, technical skills, and achievements in a sleek monochrome card layout.
- */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,9 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setupContactActions();
     }
 
-    /**
-     * Sets up click listeners for email, phone, and GitHub contact items.
-     */
     private void setupContactActions() {
         View btnEmail = findViewById(R.id.btnEmail);
         View btnPhone = findViewById(R.id.btnPhone);

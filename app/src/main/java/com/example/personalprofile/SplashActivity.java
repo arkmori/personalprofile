@@ -11,15 +11,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-/**
- * SplashActivity displays a centerpiece photo and subtext for exactly 5 seconds
- * before automatically transitioning to the MainActivity.
- */
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
-    private static final long SPLASH_DURATION = 5000; // 5000 ms = 5 seconds
-    private static final long UPDATE_INTERVAL = 50;   // Update progress every 50 ms
+    private static final long SPLASH_DURATION = 5000;
+    private static final long UPDATE_INTERVAL = 50;
 
     private Handler handler;
     private Runnable navigateRunnable;
@@ -44,20 +40,18 @@ public class SplashActivity extends AppCompatActivity {
 
         handler = new Handler(Looper.getMainLooper());
 
-        // Runnable to launch MainActivity after 5 seconds
         navigateRunnable = () -> {
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
-            
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
                 overrideActivityTransition(OVERRIDE_TRANSITION_OPEN, android.R.anim.fade_in, android.R.anim.fade_out);
             } else {
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
-            finish(); // Ensure user cannot return to splash screen on back press
+            finish();
         };
 
-        // Runnable to update progress bar and text smoothly
         progressRunnable = new Runnable() {
             @Override
             public void run() {
@@ -77,7 +71,6 @@ public class SplashActivity extends AppCompatActivity {
             }
         };
 
-        // Start countdown progress and set 5-second navigation timer
         handler.post(progressRunnable);
         handler.postDelayed(navigateRunnable, SPLASH_DURATION);
     }
@@ -85,7 +78,6 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // Prevent leaks or execution if activity is destroyed early
         if (handler != null) {
             if (navigateRunnable != null) {
                 handler.removeCallbacks(navigateRunnable);
